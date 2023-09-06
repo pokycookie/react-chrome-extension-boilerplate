@@ -1,0 +1,21 @@
+{
+  "name": "Chrome Extension Boilerplate",
+  "description": "Chrome Extension boilerplate created with React Typescript.",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}
